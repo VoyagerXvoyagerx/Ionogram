@@ -9,6 +9,10 @@ The trained models have been uploaded to google drive.
 3. mTPR=0.8713: [link](https://drive.google.com/file/d/1-4Dgu8Ff5CijDMJFwRf89c2XAEfukTlp/view?usp=sharing)
 ## Prerequisites
 [mmsegmentation](https://github.com/open-mmlab/mmsegmentation)
+## Dataset
+The Dataset we use is shared on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing)
+## Config
+The configuration of PSPNet is saved in pspnet_ce.py
 ## Train
 Train a model by running Train.ipynb
 ## Evaluate
