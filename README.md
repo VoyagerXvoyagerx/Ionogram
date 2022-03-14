@@ -1,4 +1,5 @@
 # Segmentation and Edge Detection for Ionogram Automatic Scaling
+by Yijie Zheng, Xiaoqing Wang, Yefei Luo, Hao Tian, Ziwei Chen 
 Code for paper 'Segmentation and Edge Detection for Ionogram Automatic Scaling'.
 ## Trained Model
 The trained models have been uploaded to google drive.
