@@ -8,7 +8,7 @@ The trained models have been uploaded to google drive.
 2. mTPR=0.9256: [link](https://drive.google.com/file/d/1-BF3YO9QeT1SmhDjHjvWOmyNnLP-hKDL/view?usp=sharing)
 3. mTPR=0.8713: [link](https://drive.google.com/file/d/1-4Dgu8Ff5CijDMJFwRf89c2XAEfukTlp/view?usp=sharing)
 ## Prerequisites
-[mmsegmentation](https://github.com/open-mmlab/mmsegmentation)
+[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [colab](https://colab.research.google.com/)
 ## Dataset
 The Dataset we use is shared on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing)
 ## Config
