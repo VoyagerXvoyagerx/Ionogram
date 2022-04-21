@@ -19,11 +19,9 @@ Train a model by running Train.ipynb
 Evaluate by running the notebook Evaluate.ipynb
 ## Contact
 Should you have any questions, please send email to 19211416@bjtu.edu.cn
-
-## Use Segmentation APIs
+## APIs
 The onnxruntime model is shared on google drive: [Ionogram.onnx](https://drive.google.com/file/d/1FHzDqeDSI2w9hBmtRwL9NKWW9ciFXtQM/view?usp=sharing)
-
-Do_segementation (model_path, deploy_path, input_img, work_dir, show)
+**Do_segementation (model_path, deploy_path, input_img, work_dir, show)**
   Do the Ionogram Segmentation.
   Before use this API, make sure you have install [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmdeploy](https://github.com/open-mmlab/mmdeploy/).
   ### Parameters
