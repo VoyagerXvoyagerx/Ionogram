@@ -31,31 +31,23 @@ Do_segementation (model_path, deploy_path, input_img, work_dir, show)
   - **work_dir**(str) - The path of work directory that used to save the result.  
   - **show**(int) - 1 for show the result of segmentation, 0 for not.  
 > Returns  
-
-  The output segmentation map.
-  
+  - The output segmentation map.  
 > Return type  
-
-  Tensor.  
-  
+  - Tensor.  
+ 
   
 ```Python
 onnxruntime.InferenceSession("srcnn.onnx") 
 ```  
 Get the onnx model.  
 > Parameters 
- 
-  None
-  
+ - None
 > Returns  
-
-  ort_session
-  
+ - Ort_session.
 > Return type  
+ - Onnx model.  
+  
 
-  Onnx model.  
-  
-  
 ```Python
   ort_session.run(['output'], ort_inputs)[0]
 ```
@@ -63,14 +55,11 @@ Get the onnx model.
 > Parameters
   - **ort_inputs**(str) - The path of the onnx model.  
 > Returns  
-
-  The output segmentation map.  
-  
+  - The output segmentation map.  
 > Return type  
+  - Tensor.  
 
-  Tensor.  
-  
-  
+
 ```Python
   interpret(segmap)
 ```
@@ -78,14 +67,11 @@ Get the onnx model.
 > Parameters
   - **segmap**(str) - The path of the segmentation map.  
 > Returns  
-
-  mh_pred, mf_pred, mhe_pred, mfe_pred, mhf1_pred, mff1_pred, fmin - The parameters.
-  
+  - mh_pred, mf_pred, mhe_pred, mfe_pred, mhf1_pred, mff1_pred, fmin - The parameters. 
 > Return type  
+  - List.
 
-  List.
-  
-  
+
 ```Python
   show_cha_pyplot(cimg, cmask, segmap, palette,
                                   mh_pred, mf_pred, mhe_pred, mfe_pred, mhf1_pred, mff1_pred, fmin_pred,
@@ -93,19 +79,15 @@ Get the onnx model.
 ```
   Visualization.  
 > Parameters
-  - **cimg**(str) - The path of the onnx model.  
-  - **cmask** - 
-  - **segmap** - 
-  - **palette** - 
-  - **mh_pred, ...** - The parameters of the Ionogram.
+  - **cimg**(str) - The path of the image.  
+  - **cmask**(list) - The mask of image.
+  - **segmap**(str) - The path of the segmentation map.
+  - **palette**(list) - The palette of image.
+  - **mh_pred, ...**(list) - The parameters of the Ionogram.
 > Returns  
-
-  The output visual Ionogram.  
-  
+  - The output visual Ionogram.    
 > Return type  
-
-  Tensor.
-  
+  - Tensor.
   
 ## Contact
 Should you have any questions, please send email to 19211416@bjtu.edu.cn
