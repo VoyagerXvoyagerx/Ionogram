@@ -39,7 +39,7 @@ Do_segementation(model_path, deploy_path, input_img, work_dir, show)
 ```Python
 onnxruntime.InferenceSession(model_path) 
 ```  
-Get the onnx model.  
+Get the onnx runtime inference session.  
 > Parameters 
   - **model_path**(str) - The path of the onnx model. 
 > Returns  
@@ -51,7 +51,7 @@ Get the onnx model.
 ```Python
   ort_session.run(['output'], ort_inputs)[0]
 ```
-  Inference on onnxruntime.  
+  Inferent on onnxruntime.  
 > Parameters
   - **ort_inputs**(str) - The path of the onnx model.  
 > Returns  
@@ -63,7 +63,7 @@ Get the onnx model.
 ```Python
   interpret(segmap)
 ```
-  Obtain parameters.   
+  Obtain ionospheric parameters.   
 > Parameters
   - **segmap**(str) - The path of the segmentation map.  
 > Returns  
