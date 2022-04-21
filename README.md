@@ -31,28 +31,28 @@ Do_segementation (model_path, deploy_path, input_img, work_dir, show)
   - **work_dir**(str) - The path of work directory that used to save the result.  
   - **show**(int) - 1 for show the result of segmentation, 0 for not.  
 > Returns  
-The output segmentation map.
+  The output segmentation map.
 > Return type  
-Tensor  
+  Tensor  
 ```Python
 onnxruntime.InferenceSession("srcnn.onnx") 
 ```  
 Get the onnx model.  
 > Parameters  
-None
+  None
 > Returns  
-ort_session
+  ort_session
 > Return type  
-onnx  
+  onnx  
 ```Python
-ort_session.run(['output'], ort_inputs)[0]
+  ort_session.run(['output'], ort_inputs)[0]
 ```
-Inference on onnxruntime  
+  Inference on onnxruntime  
 > Parameters
-- **ort_inputs**(str) - The path of the onnx model.  
+  - **ort_inputs**(str) - The path of the onnx model.  
 > Returns  
-The output segmentation map.  
+  The output segmentation map.  
 > Return type  
-Tensor  
+  Tensor  
 ## Contact
 Should you have any questions, please send email to 19211416@bjtu.edu.cn
