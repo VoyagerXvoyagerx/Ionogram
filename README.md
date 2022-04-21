@@ -21,7 +21,7 @@ Evaluate by running the notebook Evaluate.ipynb
 ## APIs
 
 ```Python
-Do_segementation (model_path, deploy_path, input_img, work_dir, show) 
+Do_segementation(model_path, deploy_path, input_img, work_dir, show) 
 ```
   Do the Ionogram Segmentation. Before using this API, make sure you have install [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmdeploy](https://github.com/open-mmlab/mmdeploy/).  
 > Parameters  
@@ -37,11 +37,11 @@ Do_segementation (model_path, deploy_path, input_img, work_dir, show)
  
   
 ```Python
-onnxruntime.InferenceSession("srcnn.onnx") 
+onnxruntime.InferenceSession(model_path) 
 ```  
 Get the onnx model.  
 > Parameters 
- - None
+  - **model_path**(str) - The path of the onnx model. 
 > Returns  
  - Ort_session.
 > Return type  
@@ -77,17 +77,13 @@ Get the onnx model.
                                   mh_pred, mf_pred, mhe_pred, mfe_pred, mhf1_pred, mff1_pred, fmin_pred,
                                   mh_truth, mf_truth, mhe_truth, mfe_truth, mhf1_truth, mff1_truth, fmin_truth))
 ```
-  Visualization.  
+  Visualization of the ionogram, the manual scaling result, and autoscaling result.  
 > Parameters
   - **cimg**(str) - The path of the image.  
   - **cmask**(list) - The mask of image.
   - **segmap**(str) - The path of the segmentation map.
   - **palette**(list) - The palette of image.
   - **mh_pred, ...**(list) - The parameters of the Ionogram.
-> Returns  
-  - The output visual Ionogram.    
-> Return type  
-  - Tensor.
   
 ## Contact
 Should you have any questions, please send email to 19211416@bjtu.edu.cn
