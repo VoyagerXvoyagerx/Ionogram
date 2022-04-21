@@ -30,42 +30,29 @@ Do_segementation (model_path, deploy_path, input_img, work_dir, show)
   - **input_img**(str) - The path of the Ionogram to be scaled.  
   - **work_dir**(str) - The path of work directory that used to save the result.  
   - **show**(int) - 1 for show the result of segmentation, 0 for not.  
-> Returns
-
+> Returns  
 The output segmentation map.
-
-> Return type
-
-Tensor
+> Return type  
+Tensor  
 ```Python
 onnxruntime.InferenceSession("srcnn.onnx") 
-```
-
-
-Get the onnx model.
-
-
-> Parameters
-
-> Returns
-ort_session 
-
-> Return type
-
+```  
+Get the onnx model.  
+> Parameters  
+None
+> Returns  
+ort_session
+> Return type  
+onnx  
 ```Python
 ort_session.run(['output'], ort_inputs)[0]
 ```
-Inference on onnxruntime
+Inference on onnxruntime  
 > Parameters
-
-- **ort_inputs**:
-
-> Returns
-
-The output segmentation map.
-
-> Return type
-
-Tensor
+- **ort_inputs**(str) - The path of the onnx model.  
+> Returns  
+The output segmentation map.  
+> Return type  
+Tensor  
 ## Contact
 Should you have any questions, please send email to 19211416@bjtu.edu.cn
