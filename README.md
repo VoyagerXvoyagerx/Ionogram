@@ -34,14 +34,18 @@ The segmentation result.
 > Return type
 
 torch.tensor
-### <font color=DarkGray>ort_session = onnxruntime.InferenceSession("srcnn.onnx")</font>
-> Parameters
+> <font color=DarkGray>ort_session = onnxruntime.InferenceSession("srcnn.onnx")</font>
+Get onnx model
 
-> Returns
+
+>> Parameters
+
+>> Returns
 
 >> Return type
 
 ### ort_output = ort_session.run(['output'], ort_inputs)[0]
+Inference on onnxruntime
 ```
 import onnxruntime
 
