@@ -9,7 +9,7 @@ The trained models have been uploaded to google drive.
 3. mTPR=0.8713: [link](https://drive.google.com/file/d/1-4Dgu8Ff5CijDMJFwRf89c2XAEfukTlp/view?usp=sharing)
 4. The onnxruntime model: [Ionogram.onnx](https://drive.google.com/file/d/1FHzDqeDSI2w9hBmtRwL9NKWW9ciFXtQM/view?usp=sharing)
 ## Prerequisites
-[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) , [colab](https://colab.research.google.com/) , and [opencv-python 4.5.3.56](https://opencv.org) 
+[torch](https://pytorch.org/) 1.7, [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 0.20.0, [colab](https://colab.research.google.com/) , and [opencv-python 4.5.3.56](https://opencv.org) 
 ## Dataset
 The Dataset we use is shared on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing)
 ## Config
