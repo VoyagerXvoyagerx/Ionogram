@@ -28,13 +28,13 @@ The onnxruntime model is shared on google drive: [Ionogram.onnx](https://drive.g
   - **input_img**(str): The path of the Ionogram to be scaled.  
   - **work_dir**(str): The path of work directory that used to save the result.  
   - **show**(int): 1 for show the result of segmentation, 0 for not.  
-> Returns
+  > Returns
 
-The segmentation result.
+  The segmentation result.
 
-> Return type
+  > Return type
 
-torch.tensor
+  torch.tensor
 ```
 ### 
 import onnxruntime
