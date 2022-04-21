@@ -19,27 +19,33 @@ Train a model by running Train.ipynb
 Evaluate by running the notebook Evaluate.ipynb
 ## APIs
 The onnxruntime model is shared on google drive: [Ionogram.onnx](https://drive.google.com/file/d/1FHzDqeDSI2w9hBmtRwL9NKWW9ciFXtQM/view?usp=sharing)
-### **Do_segementation (model_path, deploy_path, input_img, work_dir, show)**  
-  Do the Ionogram Segmentation.  
-  Before using this API, make sure you have install [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmdeploy](https://github.com/open-mmlab/mmdeploy/).  
+### Do_segementation (model_path, deploy_path, input_img, work_dir, show) 
+  Do the Ionogram Segmentation. Before using this API, make sure you have install [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmdeploy](https://github.com/open-mmlab/mmdeploy/).  
 > Parameters  
   - **model_path**(str): The path of the onnx model.  
   - **deploy_path**(str): The path of MMDeploy.  
   - **input_img**(str): The path of the Ionogram to be scaled.  
   - **work_dir**(str): The path of work directory that used to save the result.  
   - **show**(int): 1 for show the result of segmentation, 0 for not.  
-  > Returns
+> Returns
 
-  The segmentation result.
+The segmentation result.
 
-  > Return type
+> Return type
 
-  torch.tensor
+torch.tensor
+### <font color=DarkGray>ort_session = onnxruntime.InferenceSession("srcnn.onnx")</font>
+> Parameters
+
+> Returns
+
+>> Return type
+
+### ort_output = ort_session.run(['output'], ort_inputs)[0]
 ```
-### 
 import onnxruntime
 
-ort_session = onnxruntime.InferenceSession("srcnn.onnx")
+
 ort_inputs = {'input': input_img}
 ort_output = ort_session.run(['output'], ort_inputs)[0]
 ```
