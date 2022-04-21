@@ -45,7 +45,7 @@ Get the onnx model.
 > Returns  
  - Ort_session.
 > Return type  
- - Onnx model.  
+ - onnxruntime.capi.onnxruntime_inference_collection.InferenceSession.  
   
 
 ```Python
