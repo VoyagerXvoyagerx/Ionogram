@@ -22,15 +22,18 @@ The onnxruntime model is shared on google drive: [Ionogram.onnx](https://drive.g
 ### **Do_segementation (model_path, deploy_path, input_img, work_dir, show)**  
   Do the Ionogram Segmentation.  
   Before using this API, make sure you have install [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmdeploy](https://github.com/open-mmlab/mmdeploy/).  
-  #### Parameters  
-  **· model_path**(str): The path of the onnx model.  
-  **· deploy_path**(str): The path of MMDeploy.  
-  **· input_img**(str): The path of the Ionogram to be scaled.  
-  **· work_dir**(str): The path of work directory that used to save the result.  
-  **· show**(int): 1 for show the result of segmentation, 0 for not.  
-#### Returns
+> Parameters  
+  - ** model_path**(str): The path of the onnx model.  
+  - ** deploy_path**(str): The path of MMDeploy.  
+  - ** input_img**(str): The path of the Ionogram to be scaled.  
+  - ** work_dir**(str): The path of work directory that used to save the result.  
+  - ** show**(int): 1 for show the result of segmentation, 0 for not.  
+> Returns
 The segmentation result.
+> Return type
+torch.tensor
 ```
+### 
 import onnxruntime
 
 ort_session = onnxruntime.InferenceSession("srcnn.onnx")
