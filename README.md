@@ -1,12 +1,3 @@
-# Segmentation and Edge Detection for Ionogram Automatic Scaling
-by Yijie Zheng, Xiaoqing Wang, Yefei Luo, Hao Tian, Ziwei Chen 
-
-Code for paper 'Segmentation and Edge Detection for Ionogram Automatic Scaling'.
-
-## Abstract
-Ionograms, recorded by ionosondes, include cru- cial information about the ionosphere. Scaling ionograms is the fundamental step for analyzing ionospheric weather. With the fast growth in data collecting in recent years, human specialists are unable to manually scale a large number of ionograms in a reasonable amount of time. To acquire exact ionospheric parameters of E, F1, and F2 layers, a 3-stage technique based on semantic segmentation networks, an edge detection module, and a feature fusing module is proposed in this research. 3448 ionograms from the Chinese Academy of Sciences Digital Ionosonde located in Hainan, Huailai, and Wuhan are used to train the segmentation networks. The test results over 863 images show that 99.1% of autoscaled critical frequency foF2 has an error within 0.2 MHz, while 98.7% of autoscaled minimum virtual height h’F2 has an error within 10 km, indicating that the performance of our method is close to that by human experts. Therefore, our work may make a great contribution to ionospheric research.
-
-
 ## Prerequisites
 [torch](https://pytorch.org/) 1.7, [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 0.20.0, [colab](https://colab.research.google.com/), and [opencv-python](https://opencv.org) 4.5.3.56.
 ## Dataset
