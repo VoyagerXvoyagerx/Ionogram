@@ -1,3 +1,8 @@
+# Segmentation and Edge Detection for Ionogram Automatic Scaling
+by Yijie Zheng, Xiaoqing Wang, Yefei Luo, Hao Tian, Ziwei Chen.
+
+Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_](https://ieeexplore.ieee.org/document/9955166)
+
 ## Prerequisites
 [torch](https://pytorch.org/) 1.7, [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 0.20.0, [colab](https://colab.research.google.com/), and [opencv-python](https://opencv.org) 4.5.3.56.
 ## Dataset
