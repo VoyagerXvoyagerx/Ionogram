@@ -20,12 +20,12 @@ Evaluate by running the notebook Evaluate.ipynb
 | PSPNet        | 0.10| [model](https://drive.google.com/file/d/1-4Dgu8Ff5CijDMJFwRf89c2XAEfukTlp/view?usp=sharing)     | 0.8713 | 4.38 | 0.12  | 98.6 | 97.0 |
 | PSPNet        | 0.15   | [model](https://drive.google.com/file/d/10qGjK_RCBv5J0OEBBqNFSmi0V5Q4yJ_S/view?usp=sharing)     | 0.8814 | 4.63 | 0.112 | 98.3 | 97.0 |
 | PSPNet        | 0.20| [model](https://drive.google.com/file/d/15GxkUFSU4WzGD123GhpWVjE7YsIY9cIg/view?usp=sharing)     | 0.8070  | 4.69 | 0.100   | 98.5 | 97.8 |
-| PSPNNet+Canny | 0.08   | [model](https://drive.google.com/file/d/1-P8oreRabOPzO__NX2Ng6NUDKbGgOLW4/view?usp=sharing) | 0.9415 | 3.05 | 0.100  | 97.7 | 98.6 |
-| PSPNNet+Canny | 0.02   | [model](https://drive.google.com/file/d/1-BF3YO9QeT1SmhDjHjvWOmyNnLP-hKDL/view?usp=sharing)    | 0.9256 | 2.88 | 0.091 | 98.4 | **98.8** |
-| PSPNNet+Canny | 0.05   | [model](https://drive.google.com/file/d/1-0__f4pK5-wvBfFB0XFOB0d13N9Gyh2k/view?usp=sharing)    | 0.9021 | **2.82** | 0.084 | **99.1** | 98.7 |
-| PSPNNet+Canny | 0.10| [model](https://drive.google.com/file/d/1-4Dgu8Ff5CijDMJFwRf89c2XAEfukTlp/view?usp=sharing)    | 0.8713 | 3.01 | **0.08**  | 99.0 | 98.5 |
-| PSPNNet+Canny | 0.15   | [model](https://drive.google.com/file/d/10qGjK_RCBv5J0OEBBqNFSmi0V5Q4yJ_S/view?usp=sharing)     | 0.8814 |4.63 |0.096      |97.9|98.3    |
-| PSPNNet+Canny | 0.20| [model](https://drive.google.com/file/d/15GxkUFSU4WzGD123GhpWVjE7YsIY9cIg/view?usp=sharing)     | 0.8070  | 4.05 | 0.093 | 98.3 | 97.1 |
+| PSPNet+Canny | 0.08   | [model](https://drive.google.com/file/d/1-P8oreRabOPzO__NX2Ng6NUDKbGgOLW4/view?usp=sharing) | 0.9415 | 3.05 | 0.100  | 97.7 | 98.6 |
+| PSPNet+Canny | 0.02   | [model](https://drive.google.com/file/d/1-BF3YO9QeT1SmhDjHjvWOmyNnLP-hKDL/view?usp=sharing)    | 0.9256 | 2.88 | 0.091 | 98.4 | **98.8** |
+| PSPNet+Canny | 0.05   | [model](https://drive.google.com/file/d/1-0__f4pK5-wvBfFB0XFOB0d13N9Gyh2k/view?usp=sharing)    | 0.9021 | **2.82** | 0.084 | **99.1** | 98.7 |
+| PSPNet+Canny | 0.10| [model](https://drive.google.com/file/d/1-4Dgu8Ff5CijDMJFwRf89c2XAEfukTlp/view?usp=sharing)    | 0.8713 | 3.01 | **0.08**  | 99.0 | 98.5 |
+| PSPNet+Canny | 0.15   | [model](https://drive.google.com/file/d/10qGjK_RCBv5J0OEBBqNFSmi0V5Q4yJ_S/view?usp=sharing)     | 0.8814 |4.63 |0.096      |97.9|98.3    |
+| PSPNet+Canny | 0.20| [model](https://drive.google.com/file/d/15GxkUFSU4WzGD123GhpWVjE7YsIY9cIg/view?usp=sharing)     | 0.8070  | 4.05 | 0.093 | 98.3 | 97.1 |
 ## Citation
 If you find our work useful for your research, please consider citing:
 ```
