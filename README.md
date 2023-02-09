@@ -4,7 +4,7 @@ by Yijie Zheng, Xiaoqing Wang, Yefei Luo, Hao Tian, Ziwei Chen.
 Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_](https://ieeexplore.ieee.org/document/9955166).
 
 ## Prerequisites
-[torch](https://pytorch.org/) 1.7, [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 0.20.0, [colab](https://colab.research.google.com/), and [opencv-python](https://opencv.org) 4.5.3.56.
+[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 1.x
 ## Dataset
 The Dataset we use is shared on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing)
 ## Config
