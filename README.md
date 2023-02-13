@@ -45,7 +45,7 @@ Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_
 
 The Dataset we use is available on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing).
 
-For more information of dataset procesing, please visit [BuildDataset.ipynb](/data/BuildDataset.ipynb).
+For more information of dataset processing, please visit [BuildDataset.ipynb](/data/BuildDataset.ipynb).
 
 ## Config
 
