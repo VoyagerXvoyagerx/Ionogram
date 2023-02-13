@@ -6,8 +6,9 @@ Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_
 
 ## Prerequisites
 
-[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 0.30.0
+[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 0.30.0.
 
+[A new branch](https://github.com/VoyagerXvoyagerx/Ionogram/tree/mmseg-1.x) based on OpenMMLab 2.x and **mmseg 1.x** is now available!
 ## File Structure
 
 ```shell
@@ -43,15 +44,15 @@ Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_
 
 The Dataset we use is available on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing).
 
-For more information of dataset procesing, please visit [BuildDataset.ipynb](/data/BuildDataset.ipynb)
+For more information of dataset procesing, please visit [BuildDataset.ipynb](/data/BuildDataset.ipynb).
 
 ## Config
 
-The configuration of PSPNet is saved [here](/work_dirs/se4ionogram/pspnet_r50_ionogram_mmseg0.py)
+The configuration of PSPNet is saved [here](/work_dirs/se4ionogram/pspnet_r50_ionogram_mmseg0.py).
 
 ## Finetune
 
-Finetune the model by running [finetune_MMSegv0.ipynb](finetune_MMSegv0.ipynb)
+Finetune the model by running [finetune_MMSegv0.ipynb](finetune_MMSegv0.ipynb).
 
 ## Test
 
@@ -63,7 +64,7 @@ python tools/test.py ./work_dirs/se4ionogram/pspnet_r50_ionogram_mmseg0.py \
 
 ## Inference
 
-Get the ionospheric parameters by running the notebook [Inference.ipynb](/Inference.ipynb)
+Get the ionospheric parameters by running the notebook [Inference.ipynb](/Inference.ipynb).
 
 ## Models and results
 
@@ -100,4 +101,4 @@ Use GPU in the Post processing module to accelerate inference.
 
 ## Contact
 
-Should you have any questions, please send email to 19211416@bjtu.edu.cn
+Should you have any questions, please send email to 19211416@bjtu.edu.cn.
