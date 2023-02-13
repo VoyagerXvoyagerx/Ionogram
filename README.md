@@ -53,7 +53,7 @@ The configuration of PSPNet is saved [here](/configs/_se4ionogram/pspnet_r50_ion
 
 ## Finetune
 
-Finetune the model by running [finetune_MMSegv0.ipynb](finetune_MMSegv0.ipynb).
+Finetune the model by running [finetune.ipynb](/finetune.ipynb).
 
 ## Test
 
