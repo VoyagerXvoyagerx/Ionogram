@@ -6,12 +6,15 @@ Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_
 
 ## Prerequisites
 
-[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 0.30.0
+[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 1.0.0rc5.
 
 ## File Structure
 
 ```shell
 ./
+├── configs
+│   └── _se4ionogram
+│       └── pspnet_r50_ionogram_mmseg1.py
 ├── data
 │   ├── BuildDataset.ipynb
 │   └── IonoSeg
@@ -28,14 +31,13 @@ Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_
 │       │   └── val.txt
 │       └── viz
 │           └── 20130401040700.png
-├── finetune_MMSegv0.ipynb
+├── finetune.ipynb
 ├── Inference.ipynb
 ├── README.md
 ├── tools
 │   └── test.py
 └── work_dirs
     └── se4ionogram
-        ├── pspnet_r50_ionogram_mmseg0.py
         └── pspnet_r50_ionogram_iou_3922_acc_9153.pth
 ```
 
@@ -43,27 +45,26 @@ Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_
 
 The Dataset we use is available on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing).
 
-For more information of dataset procesing, please visit [BuildDataset.ipynb](/data/BuildDataset.ipynb)
+For more information of dataset procesing, please visit [BuildDataset.ipynb](/data/BuildDataset.ipynb).
 
 ## Config
 
-The configuration of PSPNet is saved [here](/work_dirs/se4ionogram/pspnet_r50_ionogram_mmseg0.py)
+The configuration of PSPNet is saved [here](/configs/_se4ionogram/pspnet_r50_ionogram_mmseg1.py).
 
 ## Finetune
 
-Finetune the model by running [finetune_MMSegv0.ipynb](finetune_MMSegv0.ipynb)
+Finetune the model by running [finetune_MMSegv0.ipynb](finetune_MMSegv0.ipynb).
 
 ## Test
 
 ```python
-python tools/test.py ./work_dirs/se4ionogram/pspnet_r50_ionogram_mmseg0.py \
-/home/ubuntu/mmsegmentation/work_dirs/se4ionogram/pspnet_r50_ionogram_iou_3922_acc_9153.pth \
---eval mIoU
+python tools/test.py ./configs/_se4ionogram/pspnet_r50_ionogram_mmseg1.py \
+./work_dirs/se4ionogram/pspnet_r50_ionogram_iou_3922_acc_9153.pth
 ```
 
 ## Inference
 
-Get the ionospheric parameters by running the notebook [Inference.ipynb](/Inference.ipynb)
+Get the ionospheric parameters by running the notebook [Inference.ipynb](/Inference.ipynb).
 
 ## Models and results
 
@@ -100,4 +101,4 @@ Use GPU in the Post processing module to accelerate inference.
 
 ## Contact
 
-Should you have any questions, please send email to 19211416@bjtu.edu.cn
+Should you have any questions, please send email to 19211416@bjtu.edu.cn.
