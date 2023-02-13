@@ -27,7 +27,7 @@ model = dict(
             type='CrossEntropyLoss',
             use_sigmoid=False,
             loss_weight=1.0,
-            class_weight=[0.008, 1.4, 4, 6, 2, 1, 2])),
+            class_weight=[0.2, 1.4, 4, 6, 2, 1, 2])),
     auxiliary_head=dict(
         type='FCNHead',
         in_channels=1024,
@@ -42,12 +42,12 @@ model = dict(
         loss_decode=dict(
             type='CrossEntropyLoss',
             use_sigmoid=False,
-            loss_weight=1.0,
-            class_weight=[0.008, 1.4, 4, 6, 2, 1, 2])),
+            loss_weight=0.4,
+            class_weight=[0.2, 1.4, 4, 6, 2, 1, 2])),
     train_cfg=dict(),
     test_cfg=dict(mode='whole'))
-dataset_type = 'StandfordBackgroundDataset'
-data_root = 'Iono4311'
+dataset_type = 'IonogramSegmentationDataset'
+data_root = 'data/IonoSeg'
 img_norm_cfg = dict(
     mean=[5.45, 5.45, 5.45], std=[13.12, 13.12, 13.12], to_rgb=False)
 crop_size = (512, 512)
@@ -87,10 +87,10 @@ data = dict(
     samples_per_gpu=8,
     workers_per_gpu=8,
     train=dict(
-        type='StandfordBackgroundDataset',
-        data_root='Iono4311',
-        img_dir='cimg',
-        ann_dir='cmask',
+        type='IonogramSegmentationDataset',
+        data_root='data/IonoSeg',
+        img_dir='rgbimg',
+        ann_dir='rgbmask',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='LoadAnnotations'),
@@ -105,12 +105,12 @@ data = dict(
             dict(type='DefaultFormatBundle'),
             dict(type='Collect', keys=['img', 'gt_semantic_seg'])
         ],
-        split='splits/train.txt'),
+        split='splits0/train.txt'),
     val=dict(
-        type='StandfordBackgroundDataset',
-        data_root='Iono4311',
-        img_dir='cimg',
-        ann_dir='cmask',
+        type='IonogramSegmentationDataset',
+        data_root='data/IonoSeg',
+        img_dir='rgbimg',
+        ann_dir='rgbmask',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(
@@ -129,12 +129,12 @@ data = dict(
                     dict(type='Collect', keys=['img'])
                 ])
         ],
-        split='splits/val.txt'),
+        split='splits0/val.txt'),
     test=dict(
-        type='StandfordBackgroundDataset',
-        data_root='Iono4311',
-        img_dir='cimg',
-        ann_dir='cmask',
+        type='IonogramSegmentationDataset',
+        data_root='data/IonoSeg',
+        img_dir='rgbimg',
+        ann_dir='rgbmask',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(
@@ -153,27 +153,28 @@ data = dict(
                     dict(type='Collect', keys=['img'])
                 ])
         ],
-        split='splits/val.txt'))
+        split='splits0/test.txt'))
 log_config = dict(
-    interval=100, hooks=[dict(type='TextLoggerHook', by_epoch=False)])
+    interval=1, hooks=[dict(type='TextLoggerHook', by_epoch=False)])
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-load_from = None
+load_from = '/home/ubuntu/mmsegmentation/work_dirs/se4ionogram/pspnet_r50_ionogram_iou_3922_acc_9153.pth'
 resume_from = None
 workflow = [('train', 1)]
 cudnn_benchmark = True
-optimizer = dict(type='SGD', lr=1e-05, momentum=0.9, weight_decay=0.0005)
+optimizer = dict(type='SGD', lr=0.0001, momentum=0.9, weight_decay=0.0005)
 optimizer_config = dict()
 lr_config = dict(policy='poly', power=0.9, min_lr=0.0001, by_epoch=False)
-runner = dict(type='IterBasedRunner', max_iters=4310)
+runner = dict(type='IterBasedRunner', max_iters=10)
 checkpoint_config = dict(
     by_epoch=False,
-    interval=431,
+    interval=10,
     meta=dict(
-        CLASSES=('Background', 'E', 'Es-l', 'Es-c', 'F1', 'F2', 'Spread F'),
+        CLASSES=('Background', 'E', 'Es-l', 'Es-c', 'F1', 'F2', 'Spread-F'),
         PALETTE=[[230, 230, 230], [250, 165, 30], [120, 69, 125],
                  [53, 125, 34], [0, 11, 123], [130, 20, 12], [120, 121, 80]]))
-evaluation = dict(interval=431, metric='mIoU', pre_eval=True)
-work_dir = './work_dirs/pspnet2'
+evaluation = dict(interval=10, metric='mIoU', pre_eval=True)
+work_dir = './work_dirs/se4ionogram'
 seed = 0
+device = 'cuda'
 gpu_ids = range(0, 1)

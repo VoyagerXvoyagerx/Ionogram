@@ -1,18 +1,66 @@
 # Segmentation and Edge Detection for Ionogram Automatic Scaling
+
 by Yijie Zheng, Xiaoqing Wang, Yefei Luo, Hao Tian, Ziwei Chen.
 
 Code for paper [_Segmentation and Edge Detection for Ionogram Automatic Scaling_](https://ieeexplore.ieee.org/document/9955166).
 
 ## Prerequisites
-[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 1.x
+
+[mmsegmentation](https://github.com/open-mmlab/mmsegmentation) 0.30.0
+
+# File Structure
+
+```shell
+├── data
+│   ├── BuildDataset.ipynb
+│   └── IonoSeg
+│       ├── img
+│       ├── label
+│       ├── mask
+│       ├── rgbimg
+│       ├── rgbmask
+│       ├── splits0
+│       │   ├── splits.ipynb
+│       │   ├── test.txt
+│       │   ├── train.txt
+│       │   ├── train_val.txt
+│       │   └── val.txt
+│       └── viz
+│           └── 20130401040700.png
+├── Evaluate.ipynb
+├── finetune_MMSegv0.ipynb
+├── README.md
+├── tools
+│   └── test.py
+└── work_dirs
+    └── se4ionogram
+        └── pspnet_r50_ionogram_mmseg0.py
+```
+
 ## Dataset
-The Dataset we use is shared on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing)
+
+The Dataset we use is available on google drive: [Iono4311.rar](https://drive.google.com/file/d/1MZUonB6E0o7lq_NndI-F3PEVkQH3C8pz/view?usp=sharing)
+
 ## Config
-The configuration of PSPNet is saved in pspnet_ce.py
-## Train
-Train a model by running Train.ipynb
-## Evaluate
-Evaluate by running the notebook Evaluate.ipynb
+
+The configuration of PSPNet is saved at ./work_dirs/se4ionogram/pspnet_r50_ionogram_mmseg0.py
+
+## Finetune
+
+Finetune the model by running finetune_MMSegv0.ipynb
+
+## Test
+
+```python
+python tools/test.py ./work_dirs/se4ionogram/pspnet_r50_ionogram_mmseg0.py \
+/home/ubuntu/mmsegmentation/work_dirs/se4ionogram/pspnet_r50_ionogram_iou_3922_acc_9153.pth \
+--eval mIoU
+```
+
+## Inference
+
+Get the ionospheric parameters by running the notebook Inference.ipynb
+
 ## Models and results
 
 | Method        | Background Weight | Download | mTPR   | DH   | DF    | dfoF2 $\le$ 0.2MHz | dhF2 $\le$ 10km |
@@ -27,8 +75,10 @@ Evaluate by running the notebook Evaluate.ipynb
 | PSPNet+Canny | 0.15   | [model](https://drive.google.com/file/d/10qGjK_RCBv5J0OEBBqNFSmi0V5Q4yJ_S/view?usp=sharing)     | 0.8814 |4.63 |0.096      |97.9|98.3    |
 | PSPNet+Canny | 0.20| [model](https://drive.google.com/file/d/15GxkUFSU4WzGD123GhpWVjE7YsIY9cIg/view?usp=sharing)     | 0.8070  | 4.05 | 0.093 | 98.3 | 97.1 |
 ## Citation
+
 If you find our work useful for your research, please consider citing:
-```
+
+```tex
 @INPROCEEDINGS{9955166,
   author={Zheng, Yijie and Wang, Xiaoqing and Luo, Yefei and Tian, Hao and Chen, Ziwei},
   booktitle={2022 International Conference on Machine Learning, Cloud Computing and Intelligent Mining (MLCCIM)},
@@ -38,5 +88,7 @@ If you find our work useful for your research, please consider citing:
   doi={10.1109/MLCCIM55934.2022.00026}
 }
 ```
+
 ## Contact
+
 Should you have any questions, please send email to 19211416@bjtu.edu.cn
