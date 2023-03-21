@@ -95,10 +95,6 @@ If you find our work useful for your research, please consider citing:
 }
 ```
 
-## To Do
-
-Use GPU in the Post processing module to accelerate inference.
-
 ## Contact
 
 Should you have any questions, please send email to 19211416@bjtu.edu.cn.
